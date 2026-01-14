@@ -5,7 +5,7 @@ try {
     const jsNum1 = core.getInput('num1')
     const jsNum2 = core.getInput('num2')
     result = parseInt(jsNum1) + parseInt(jsNum2)
-    core.setOutput(result, result)
+    core.setOutput(result)
 } catch (error) {
-    core.setFailed(Error.message)
+    core.setFailed(error.message)
 }
