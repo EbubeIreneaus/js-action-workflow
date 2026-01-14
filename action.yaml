@@ -1,0 +1,20 @@
+name: jsAction
+description: calculator to text jsAction
+
+inputs:
+  num1:
+    required: true
+    default: 0
+  num2:
+    required: true
+    default: 0
+
+outputs:
+  result:
+     description: outputs of our result
+    
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
+  
