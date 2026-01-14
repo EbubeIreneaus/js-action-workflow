@@ -1,0 +1,21 @@
+name: jsAction
+
+on: 
+    push:
+    workflow_dispatch: 
+
+jobs:
+    test_js_action:
+        runs-on: ubuntu-latest
+        name: Test Javascript jsAction
+        steps:
+            - name: checkout
+              uses: actions/checkout@v6
+
+            - name: step process 2
+              id: mainStep
+              uses: ./
+              with:
+                num1: 20
+                num2: 500
+            - run: echo ${{steps.mainStep.outputs.result}}
